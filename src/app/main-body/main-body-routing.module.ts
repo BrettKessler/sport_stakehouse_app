@@ -11,8 +11,6 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'game-list', component: GameListComponent },
   { path: 'faq', component: FaqComponent },
-
-
 ];
 
 @NgModule({

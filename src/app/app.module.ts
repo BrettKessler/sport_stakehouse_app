@@ -13,6 +13,7 @@ import { MainBodyComponent } from './main-body/main-body/main-body.component';
 import { GameListComponent } from './main-body/game-list/game-list.component';
 import { FaqComponent } from './main-body/faq/faq.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
