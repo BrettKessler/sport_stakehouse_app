@@ -9,11 +9,11 @@ interface Game {
   providedIn: 'root'
 })
   export class GameService {
-    url = 'https://thawing-fortress-79986.herokuapp.com';
+    private url = '/api/games';
 
     constructor(private http: HttpClient) {}
 
     getAllGames() {
-      return this.http.get(`${this.url}/api/games`);
+      return this.http.get(this.url);
     }
   }
