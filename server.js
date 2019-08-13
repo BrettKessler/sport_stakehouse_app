@@ -59,7 +59,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.route('/api/games').get((req, res) => {
+app.get('api/games', function(req, res) {
   Game.find().toArray(function(err, docs) {
     if(err) {
       handleError(res, err.message, "failed to get games")
