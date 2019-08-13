@@ -64,7 +64,7 @@ app.get('api/games', function(req, res) {
     if(err) {
       handleError(res, err.message, "failed to get games")
     } else {
-      res.status(200).json(docs);
+      res('HELLLLOOOOOO')
     }
   })
     // .then(games => {
