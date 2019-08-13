@@ -23,11 +23,11 @@ mongoose.connect(process.env.MONGO_DB)
   console.log('Connection Failed!')
 })
 
-// app.use(express.static(__dirname + '/dist/sport-stakehouse-app'));
+app.use(express.static(__dirname + '/dist/sport-stakehouse-app'));
 
-// app.get('/*', function(req, res) {
-//     res.sendFile(path.join(__dirname + '/dist/sport-stakehouse-app/index.html'));
-// });
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/sport-stakehouse-app/index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Sport Stakehouse Server Started on port ${port}`);
