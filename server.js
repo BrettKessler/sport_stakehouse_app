@@ -14,7 +14,7 @@ const path = require('path')
 
 // app.use(express.static(distDir));
 
-mongoose.connect('mongodb+srv://brett:JWM9sg77yFsMDXeg@cluster0-nqx9x.mongodb.net/gameData?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_DB)
 
 .then(() => {
   console.log('Connected to Sport Stakehouse database!')
@@ -63,7 +63,11 @@ app.route('/api/games').get((req, res) => {
   Game.find()
     .then(games => {
       console.log(games);
-      return games
+      return res.status(200).json({
+
+        message: 'Games fetched successfully',
+        games: games
+      });
     })
 })
 
