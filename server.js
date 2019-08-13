@@ -23,11 +23,11 @@ mongoose.connect(process.env.MONGO_DB)
   console.log('Connection Failed!')
 })
 
-app.use(express.static(__dirname + '/dist/sport-stakehouse-app'));
+// app.use(express.static(__dirname + '/dist/sport-stakehouse-app'));
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/sport-stakehouse-app/index.html'));
-});
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/dist/sport-stakehouse-app/index.html'));
+// });
 
 app.listen(port, () => {
   console.log(`Sport Stakehouse Server Started on port ${port}`);
@@ -59,22 +59,16 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('api/games', function(req, res) {
-  Game.find().toArray(function(err, docs) {
-    if(err) {
-      handleError(res, err.message, "failed to get games")
-    } else {
-      res('HELLLLOOOOOO')
-    }
-  })
-    // .then(games => {
-    //   console.log(games);
-    //   return res.status(200).json({
+app.route('/api/games').get((req, res) => {
+  Game.find()
+    .then(games => {
+      console.log(games);
+      return res.status(200).json({
 
-    //     message: 'Games fetched successfully',
-    //     games: games
-    //   });
-    // })
+        message: 'Games fetched successfully',
+        games: games
+      });
+    })
 })
 
 // This route handles single games, we can use this for a search, the : means that it's
