@@ -1,41 +1,41 @@
 // @import '~src/styles/global/global-styles.scss';
 
-// .side-menu-container {
-//   position: fixed;
-// }
+.side-menu-container {
+  position: fixed;
+}
 
-// .logo-wrapper {
-//     a{
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//     }
+.logo-wrapper {
+    a{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-//  }
+ }
 
-// .thin-text {
-//   font-weight: $sshThin;
-// }
+.thin-text {
+  font-weight: $sshThin;
+}
 
-// .searchbar {
-//   margin: $ten 0;
-// }
+.searchbar {
+  margin: $ten 0;
+}
 
-// .btn-green {
-//   background: #FF6666;
-//   color: $ssh-gray;
-//   padding: 10px;
-//   border-radius: $ten;
-//   border-color: none;
-// }
+.btn-green {
+  background: #FF6666;
+  color: $ssh-gray;
+  padding: 10px;
+  border-radius: $ten;
+  border-color: none;
+}
 
-// .btn.btn-green{
-//   margin:auto;
-// }
+.btn.btn-green{
+  margin:auto;
+}
 
-// @media screen and (min-width: 992px){
-//   .logo-wrapper{
-//     display: inline-block;
-//   }
-// }
+@media screen and (min-width: 992px){
+  .logo-wrapper{
+    display: inline-block;
+  }
+}
