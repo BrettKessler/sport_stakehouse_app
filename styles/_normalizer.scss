@@ -1,0 +1,39 @@
+@import './colors';
+@import './vars';
+
+// This is the normalizer file, if you think that something should be styled
+// globally, please add it here. Also as you can see above, we are importing
+// other files so that you can use them within this file. Please check ot make
+// sure that there is a variable for the thing you are tyring to do, if not maybe
+// it's a good idea to create one so that others can use it in the future.
+
+// This colors the background of the whole site.
+
+body {
+  position: absolute;
+  background: $ssh-white;
+  height: 100%;
+  width: 100%;
+}
+// Normalizes all the tags
+h1,h2,h3,h4,h5,h6,p,li {
+  color: $ssh-gray;
+}
+// Sets consistant height for all h2's
+h2 {
+  font-size: $twenty;
+}
+// Sets consistant ul
+ul {
+  list-style-type: none;
+  padding: $zero;
+}
+
+p {
+ font-size: 12px;
+}
+
+i {
+  color: $ssh-gray;
+  margin: $five;
+}
