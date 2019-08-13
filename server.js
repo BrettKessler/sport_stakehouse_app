@@ -14,7 +14,6 @@ const path = require('path')
 
 // app.use(express.static(distDir));
 
-
 mongoose.connect('mongodb+srv://brett:JWM9sg77yFsMDXeg@cluster0-nqx9x.mongodb.net/gameData?retryWrites=true&w=majority')
 
 .then(() => {
