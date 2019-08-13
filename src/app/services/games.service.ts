@@ -14,6 +14,6 @@ interface Game {
     constructor(private http: HttpClient) {}
 
     getAllGames() {
-      return this.http.get(`/api/games`);
+      return this.http.get(`${this.url}/api/games`);
     }
   }

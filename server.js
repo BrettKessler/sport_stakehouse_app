@@ -60,15 +60,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-// This is the routing, this will probably be split off later on into its own file
-// So that this one stays pretty clean.
-
-
-// This route will grab all the current games, currently it's not hooked up to a backend
-// so I'm just spoofing data to return.
 app.route('/api/games').get((req, res) => {
   Game.find()
     .then(games => {
+      console.log(games);
       return res.status(200).json({
         message: 'Games fetched successfully',
         games: games
