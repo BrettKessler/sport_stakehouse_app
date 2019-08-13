@@ -60,15 +60,21 @@ app.use(function (req, res, next) {
 });
 
 app.route('/api/games').get((req, res) => {
-  Game.find()
-    .then(games => {
-      console.log(games);
-      return res.status(200).json({
+  Game.find().toArray(function(err, docs) {
+    if(err) {
+      handleError(res, err.message, "failed to get games")
+    } else {
+      res.status(200).json(docs);
+    }
+  })
+    // .then(games => {
+    //   console.log(games);
+    //   return res.status(200).json({
 
-        message: 'Games fetched successfully',
-        games: games
-      });
-    })
+    //     message: 'Games fetched successfully',
+    //     games: games
+    //   });
+    // })
 })
 
 // This route handles single games, we can use this for a search, the : means that it's
