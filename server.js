@@ -8,6 +8,8 @@ const Game = require('./backend/models/games');
 
 const mongoose = require('mongoose');
 
+const path = require('path')
+
 // var distDir = __dirname + "/dist/";
 
 // app.use(express.static(distDir));
