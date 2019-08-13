@@ -66,7 +66,7 @@ app.route('/api/games').get((req, res) => {
       console.log(games);
       return res.status(200).json({
         message: 'Games fetched successfully',
-        games: games
+        games: JSON.parse(games)
       });
     })
 })
