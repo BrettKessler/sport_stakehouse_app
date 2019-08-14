@@ -43,7 +43,7 @@ app.listen(port, () => {
 app.use(function (req, res, next) {
 
   // Website we wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'https://www.thawing-fortress-79986.herokuapp.com');
+  res.setHeader('Access-Control-Allow-Origin', 'https://thawing-fortress-79986.herokuapp.com');
 
   // Request methods we wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
