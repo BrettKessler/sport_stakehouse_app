@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 interface Game {
   name: string;
@@ -14,6 +14,7 @@ interface Game {
     constructor(private http: HttpClient) {}
 
     getAllGames() {
+      console.log()
       return this.http.get(this.url);
     }
   }
