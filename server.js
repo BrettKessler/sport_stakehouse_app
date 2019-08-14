@@ -26,10 +26,6 @@ mongoose.connect(process.env.MONGO_DB)
 app.use(express.static(__dirname + '/dist/sport-stakehouse-app'));
 
 
-app.listen(port, () => {
-  console.log(`Sport Stakehouse Server Started on port ${port}`);
-})
-
 // If we don't take care of the CORS policy, the site will not let our routing be handled
 // it's a security thing. What this is saying is, if the request comes from "http://localhost:4200"
 // assume that it is a good route and safe for us to use.
@@ -79,6 +75,9 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/sport-stakehouse-app/index.html'));
 });
 
+app.listen(port, () => {
+  console.log(`Sport Stakehouse Server Started on port ${port}`);
+})
 // app.route('/api/games').post((req, res) => {
 //   const postGames = new Game({
 //     homeTeam: {
